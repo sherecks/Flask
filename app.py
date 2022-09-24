@@ -49,4 +49,11 @@ def struc():
 
     moons = Galileanmoons("Io", "Europa", "Ganymede", "Calisto")
 
-    return render_template("data-struc.html", movies=movies, car=car, moons=moons)
+    kwargs = {
+        "movies": movies,
+        "car": car,
+        "moons": moons
+    }
+
+
+    return render_template("data-struc.html", **kwargs)
