@@ -21,3 +21,15 @@ def hello():
     return render_template(
         "jinja_intro.html", **kwargs
         )
+
+
+@app.route("/struc")
+def struc():
+
+    movies = [   
+        "BATMAN - Cavaleiros das Trevas",
+        "Pulp Fiction",
+        "Casa do Dragão"
+    ]
+
+    return render_template("data-struc.html", movies=movies)
