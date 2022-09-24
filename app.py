@@ -7,23 +7,17 @@ app=Flask(__name__)
 @app.route("/joao")
 def hello():
 
-    #addition
+    name="João Pedro"
+    #adição
     idade1 = 21
     idade2= 19
 
-    return render_template(
-        "jinja_intro.html", name="João Pedro", idade1="21", idade2="19"
-        )
-
-
-
-@app.route("/pietra")
-def pietra():
-
-    #addition
-    idade3 = 19
-    idade4= 21
+    kwargs = {
+        "name": name,
+        "idade1": idade1,
+        "idade2": idade2
+    }
 
     return render_template(
-        "jinja2_intro.html", name="Pietra Pereria Nunes", idade3="19", idade4="21"
+        "jinja_intro.html", **kwargs
         )
