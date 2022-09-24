@@ -4,6 +4,14 @@ from flask import Flask, render_template
 app=Flask(__name__)
 
 
+
+class Galileanmoons:
+    def __init__(self, first, second, third, fourth):
+        self.first = first
+        self.second = second
+        self.third = third
+        self.fourth = fourth
+
 @app.route("/joao")
 def hello():
 
@@ -32,4 +40,13 @@ def struc():
         "Casa do Dragão"
     ]
 
-    return render_template("data-struc.html", movies=movies)
+
+    car = {
+        "marca": "Volkswagen",
+        "modelo": "Fusca",
+        "ano": "1979",
+    }
+
+    moons = Galileanmoons("Io", "Europa", "Ganymede", "Calisto")
+
+    return render_template("data-struc.html", movies=movies, car=car, moons=moons)
