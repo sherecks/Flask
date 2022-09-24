@@ -5,10 +5,9 @@ app=Flask(__name__)
 
 @app.route("/")
 def hello():
-    return render_template("first.html")
+    return render_template(
+        "jinja_intro.html", name="João Pedro", template_name="Jinja2"
+        )
 
 
 
-@app.route("/fancy")
-def fancy():
-    return render_template("second.html")
