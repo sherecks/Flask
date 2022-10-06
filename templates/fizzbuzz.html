@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block content %}
+ 
+{% for n in range(1, 101) %}
+    {% if n is divisibleby(3)%}
+    <li>Fizz</li>
+    {% else %}
+    <li>{{ n }}</li>
+    {% endif %}
+{% endfor %}
+
+{% endblock %}

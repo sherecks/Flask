@@ -70,3 +70,9 @@ def todo():
     ]
 
     return render_template("home.html",  todos=todos)
+
+
+@app.route("/fizz")
+def fizz():
+
+    return render_template("fizzbuzz.html")
