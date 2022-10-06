@@ -1,12 +1,26 @@
 {% extends "base.html" %}
-{% from "macros.jinja2" as macros %}
+{% import "macros.jinja2" as macros %}
+
+{% block head %}
+    <style>
+
+        .lista {
+            background-color: rgb(0, 129, 86);
+        }
+
+        .estilo {
+            background-color: rgb(66, 66, 255);
+        }
+
+    </style>
+{% endblock %}
 
 {% block content %}
     {% set num_todos = todos | length %}
 
     {% if num_todos > 0 %}
-        <p>Você tem {{ num_todos }} oque fazer hoje</p>
-        <ul>
+        <p class="estilo">Você tem {{ num_todos }} oque fazer hoje</p>
+        <ul class="lista">
             {% for text, completed in todos %}
                 {{ macros.todo_list(todos)}}
             {% endfor %}

@@ -63,7 +63,7 @@ def struc():
 @app.route("/home")
 def todo():
 
-    
+
     todos = [
         ("Pegar comida", False),
         ("Aprender a programar", True)
