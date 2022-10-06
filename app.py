@@ -12,6 +12,7 @@ class Galileanmoons:
         self.third = third
         self.fourth = fourth
 
+
 @app.route("/joao")
 def hello():
 
@@ -57,3 +58,15 @@ def struc():
 
 
     return render_template("data-struc.html", **kwargs)
+
+
+@app.route("/home")
+def todo():
+
+    
+    todos = [
+        ("Pegar comida", False),
+        ("Aprender a programar", True)
+    ]
+
+    return render_template("home.html",  todos=todos)
