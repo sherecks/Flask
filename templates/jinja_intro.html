@@ -1,8 +1,14 @@
 {% extends "base.html" %}
 
+
+{% block head %}
+   <link rel="stylesheet" href="/static/css/style.css"/>
+{% endblock %}
+
 {% block content %}
 
-    <h1>Bem Vindo, {{ name }}, {{ idade1 }}</h1>
+    <h1 class="estilo">Bem Vindo, {{ name }}, {{ idade1 }}</h1>
     <p>Essa é a soma entre as nossas idades = {{ idade1 + idade2 }} </p>
+    <a href="{{ url_for('struc') }}">Next</a>
 
 {% endblock %}

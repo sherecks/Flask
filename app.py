@@ -13,8 +13,8 @@ class Galileanmoons:
         self.fourth = fourth
 
 
-@app.route("/joao")
-def hello():
+@app.route("/")
+def home():
 
     name="João Pedro"
     #adição
@@ -60,7 +60,7 @@ def struc():
     return render_template("data-struc.html", **kwargs)
 
 
-@app.route("/home")
+@app.route("/todo")
 def todo():
 
 
@@ -69,7 +69,7 @@ def todo():
         ("Aprender a programar", True)
     ]
 
-    return render_template("home.html",  todos=todos)
+    return render_template("todo.html",  todos=todos)
 
 
 @app.route("/fizz")
